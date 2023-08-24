@@ -38,7 +38,7 @@ class NitroGen:
     def __init__(self): 
         self.fileName = "temp/NitroCodes.txt" 
 
-    def main(self): 
+    def main(self, num=None, webhook=""): 
         clear() 
         if os.name == "nt":
             print("")
@@ -46,13 +46,15 @@ class NitroGen:
         clear()
         nitrogentitle()
         print(f"""{y}[{w}#{y}]{w} Input How Many Codes to Generate and Check""")
-        num = int(input(f"""{y}[{b}#{y}]{w} Number of nitros to generate: """))
+        if num == None:
+            num = int(input(f"""{y}[{b}#{y}]{w} Number of nitros to generate: """))
 
         print(f"""\n{y}[{w}+{y}]{w} Do you wish to use a discord webhook? - [If so type it here or press enter to ignore]""")
-        url = input(f"""{y}[{b}#{y}]{w} WebHook: """)
+        if webhook == "":
+            webhook = input(f"""{y}[{b}#{y}]{w} WebHook: """)
         time.sleep(1)
         clear()
-        webhook = url if url != "" else None 
+        webhook = webhook if webhook != "" else None 
         valid = [] 
         invalid = 0 
 
