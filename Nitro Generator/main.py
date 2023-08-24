@@ -14,16 +14,6 @@ b = Fore.LIGHTBLUE_EX
 w = Fore.LIGHTWHITE_EX
 
 
-def setTitle(_str):
-    system = os.name
-    if system == 'nt':
-        ctypes.windll.kernel32.SetConsoleTitleW(f"{_str} - Made By AverageBlank")
-    elif system == 'posix':
-        sys.stdout.write(f"\x1b]0;{_str} - Made By AverageBlank\x07")
-    else:
-        pass
-
-
 def clear():
     system = os.name
     if system == 'nt':
@@ -49,7 +39,6 @@ class NitroGen:
         self.fileName = "temp/NitroCodes.txt" 
 
     def main(self): 
-        setTitle("Nitro Generator and Checker")
         clear() 
         if os.name == "nt":
             print("")
