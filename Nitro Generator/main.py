@@ -45,12 +45,12 @@ class NitroGen:
 
         clear()
         nitrogentitle()
-        print(f"""{y}[{w}#{y}]{w} Input How Many Codes to Generate and Check""")
         if num == None:
+            print(f"""{y}[{w}#{y}]{w} Input How Many Codes to Generate and Check""")
             num = int(input(f"""{y}[{b}#{y}]{w} Number of nitros to generate: """))
 
-        print(f"""\n{y}[{w}+{y}]{w} Do you wish to use a discord webhook? - [If so type it here or press enter to ignore]""")
         if webhook == "":
+            print(f"""\n{y}[{w}+{y}]{w} Do you wish to use a discord webhook? - [If so type it here or press enter to ignore]""")
             webhook = input(f"""{y}[{b}#{y}]{w} WebHook: """)
         time.sleep(1)
         clear()
